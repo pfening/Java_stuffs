@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Title</title>
+    </h:head>
+    <h:body>
+        
+        <h:form>
+            <h:outputLabel id="outtext" value="${user.name}"></h:outputLabel><br/>
+                <h:inputText id="intext" value="${user.name}"></h:inputText><br/>
+                <h:commandButton value="OK" action="${user.check()}">
+                    <f:ajax event="keyup" execute="intext" render="outtext"></f:ajax>
+                </h:commandButton>         
+        <h:outputLabel id="msg" value="${user.msg}"></h:outputLabel><br/>
+        </h:form>
+        
+        <h:form>
+            <h:selectOneMenu id="list" onchange="submit()" value="${dAOBean.selectedName}">
+                <f:selectItems value="${dAOBean.list}"></f:selectItems>                    
+            </h:selectOneMenu><br/>
+  
+            <h:outputLabel id="name" value="#{dAOBean.user.name}"/><br/>
+            <h:outputLabel id="place" value="#{dAOBean.user.place}"/><br/>
+            <h:outputLabel id="age" value="#{dAOBean.user.age}"/><br/>
+            
+            Name: <h:inputText id="inname" value="#{dAOBean.user.name}" binding="#{dAOBean.name}"/><br/>
+            Place: <h:inputText id="inplace" value="#{dAOBean.place}"/><br/>
+            Age: <h:inputText id="inage" value="#{dAOBean.age}"/><br/>
+            
+            <h:commandButton value="Save" action="${dAOBean.setUser()}"/>
+            <h:commandButton value="Delete" action="${dAOBean.delUser()}"/>
+        </h:form> 
+    </h:body>
+</html>
+

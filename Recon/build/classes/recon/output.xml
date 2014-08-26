@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datastream>
+    <service name="HSH:DSNFS002">
+        <erurl>62.184.237.41</erurl>
+        <mail>cipriani@de.ibm.com</mail>
+        <erposixpkfile>/opt/tdi/.ssh/cmlidi_dsa</erposixpkfile>
+        <objectclass>erPosixAixRMIService</objectclass>
+        <users>4951</users>
+        <orphans>1</orphans>
+        <cbn>no value</cbn>
+        <privcbn>CBN-Access-January-34</privcbn>
+        <errormsg>no value</errormsg>
+        <lastrecon>2013-05-27 16:17:59:421 GMT</lastrecon>
+    </service>
+    <service name="HLC:HCLD0009">
+        <erurl>158.98.144.3:43473</erurl>
+        <mail>Zoltan_Ujvari@hu.ibm.com</mail>
+        <erposixpkfile>/opt/tdi/.ssh/itimwas2_dsa</erposixpkfile>
+        <objectclass>erPosixAixRMIService</objectclass>
+        <users>63</users>
+        <orphans>0</orphans>
+        <cbn>CBN-Account-February-01</cbn>
+        <privcbn>CBN-Access-September-30</privcbn>
+        <errormsg>"Exception occured while executing RXA API. Please refer ibmdi logs for details."</errormsg>
+        <lastrecon>2013-06-07 03:58:41:644 GMT</lastrecon>
+    </service>
+    <service name="MMG:MMGDSAP020">
+        <erurl>164.139.210.203</erurl>
+        <mail>lakatos.erno@hu.ibm.com</mail>
+        <erposixpkfile>/opt/tdi/.ssh/cmlidi_dsa</erposixpkfile>
+        <objectclass>erPosixAixRMIService</objectclass>
+        <users>27</users>
+        <orphans>0</orphans>
+        <cbn>CBN-Account-June-02</cbn>
+        <privcbn>CBN-Access-June-22</privcbn>
+        <errormsg>"CTGDJC023E Could not establish a connection to the target machine with the authorization credentials that were provided."</errormsg>
+        <lastrecon>2013-06-07 04:54:27:599 GMT</lastrecon>
+    </service>
+    <service name="LUC:TRWPHYP733A1">
+        <erurl>10.176.42.31</erurl>
+        <mail>Zoltan_Ujvari@hu.ibm.com</mail>
+        <erposixpkfile>/opt/tdi/.ssh/cmlidi_dsa</erposixpkfile>
+        <objectclass>erPosixAixRMIService</objectclass>
+        <users>27</users>
+        <orphans>0</orphans>
+        <cbn>CBN-Account-Lucas</cbn>
+        <privcbn>CBN-Access-Lucas-09</privcbn>
+        <errormsg>"CTGDJC017E The following internal RXA error message was generated: CTGRI0026E A connection could not be completed to 10.176.42.31 during the specified timeout interval."</errormsg>
+        <lastrecon>2013-06-07 01:13:52:292 GMT</lastrecon>
+    </service>
+    <service name="PAC:PAND0001">
+        <erurl>137.40.169.214</erurl>
+        <mail>lakatos.erno@hu.ibm.com</mail>
+        <erposixpkfile>/opt/tdi/.ssh/swfgw_dsa</erposixpkfile>
+        <objectclass>erPosixAixRMIService</objectclass>
+        <users>30</users>
+        <orphans>0</orphans>
+        <cbn>CBN-Account-June-01</cbn>
+        <privcbn>CBN-Access-June-01</privcbn>
+        <errormsg>"CTGDJC017E The following internal RXA error message was generated: CTGRI0026E A connection could not be completed to 137.40.169.214 during the specified timeout interval."</errormsg>
+        <lastrecon>2013-06-07 02:01:03:280 GMT</lastrecon>
+    </service>
+    <service name="PSP:PSPMPISDS05S">
+        <erurl>129.39.159.105:43025</erurl>
+        <mail>lakatos.erno@hu.ibm.com</mail>
+        <erposixpkfile>/opt/tdi/.ssh/itimwas2_dsa</erposixpkfile>
+        <objectclass>erPosixSolarisRMIService</objectclass>
+        <users>33</users>
+        <orphans>0</orphans>
+        <cbn>CBN-Account-June-03</cbn>
+        <privcbn>CBN-Access-May-47</privcbn>
+        <errormsg>no value</errormsg>
+        <lastrecon>2013-05-22 00:38:03:067 GMT</lastrecon>
+    </service>
+</datastream>

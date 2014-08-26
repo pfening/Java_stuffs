@@ -1,0 +1,16 @@
+!SESSION 2013-06-04 21:03:00.999 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.fullversion=JRE 1.7.0 IBM J9 2.6 Linux amd64-64 Compressed References 20130205_137358 (JIT enabled, AOT enabled)
+J9VM - R26_Java726_SR4_20130205_1656_B137358
+JIT  - r11.b03_20130131_32403
+GC   - R26_Java726_SR4_20130205_1656_B137358_CMPRSS
+J9CL - 20130205_137358
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data /home/gabor/NetBeansProjects -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 4 4 2013-06-04 21:03:05.470
+!MESSAGE Referenced part does not exist yet: com.ibm.etools.ui.navigator.SDExplorer.
+
+!ENTRY org.eclipse.ui 4 4 2013-06-04 21:03:10.248
+!MESSAGE Invalid preference page path: Project Settings

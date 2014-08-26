@@ -1,0 +1,792 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f0463f78e9f, pid=6326, tid=139656845190912
+#
+# JRE version: 7.0_17-b02
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (23.7-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x57be9f]  jni_GetStringUTFChars+0x9f
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f045c009000):  JavaThread "main" [_thread_in_vm, id=6331, stack(0x00007f046495e000,0x00007f0464a5f000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f045c009000, RCX=0x00007f045c0064b0, RDX=0x00007f04646f70e0
+RSP=0x00007f0464a5d670, RBP=0x00007f0464a5d6e0, RSI=0x0000000000000000, RDI=0x00007f045c0091d8
+R8 =0x00007f04646f2620, R9 =0x00000000d84fa2b8, R10=0x0000000000000004, R11=0x00007f04646f70e8
+R12=0x0000000000000000, R13=0x0000000000000000, R14=0x00007f0464a5d7b8, R15=0x00007f045c009000
+RIP=0x00007f0463f78e9f, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f0464a5d670)
+0x00007f0464a5d670:   00007f045c009878 0000000000000000
+0x00007f0464a5d680:   00007f045c009000 0000000000000000
+0x00007f0464a5d690:   00007f0464a5d7b0 00007f0460199c43
+0x00007f0464a5d6a0:   00007f045c009000 00007f045c009878
+0x00007f0464a5d6b0:   00007f045c009000 0000000081d6c888
+0x00007f0464a5d6c0:   00007f045cb7c1f8 0000000000000000
+0x00007f0464a5d6d0:   00007f0464a5d7b8 00007f045c009000
+0x00007f0464a5d6e0:   00007f045c0091d8 00007f04593a62b0
+0x00007f0464a5d6f0:   0000000081d6c888 0000000000000000
+0x00007f0464a5d700:   0000000081d6c888 00007f0464a5d790
+0x00007f0464a5d710:   0000000000000000 0000000081d6c880
+0x00007f0464a5d720:   00007f0464a5d7b8 00007f046018f963
+0x00007f0464a5d730:   00007f045c009878 00007f0464a5d828
+0x00007f0464a5d740:   0000000000000000 00000000d84fa2b8
+0x00007f0464a5d750:   00007f0464a5d740 0000000081d6c880
+0x00007f0464a5d760:   00007f0464a5d7b8 0000000081d76c98
+0x00007f0464a5d770:   0000000000000000 0000000081d6c888
+0x00007f0464a5d780:   0000000000000000 00007f0464a5d7b0
+0x00007f0464a5d790:   00007f0464a5d818 00007f0460183275
+0x00007f0464a5d7a0:   0000000000000000 00007f046018bdd7
+0x00007f0464a5d7b0:   0000000000000000 00000000d84fa2b8
+0x00007f0464a5d7c0:   00000000d851b5e8 0000000000000001
+0x00007f0464a5d7d0:   00000000d84fa2b8 00007f0464a5d7c8
+0x00007f0464a5d7e0:   0000000081d71345 00007f0464a5d830
+0x00007f0464a5d7f0:   0000000081d764f8 0000000000000000
+0x00007f0464a5d800:   0000000081d71390 00007f0464a5d7b0
+0x00007f0464a5d810:   00007f0464a5d828 00007f0464a5d878
+0x00007f0464a5d820:   00007f0460183158 00000000d851b5e8
+0x00007f0464a5d830:   00000000d84fa2b8 00007f0464a5d838
+0x00007f0464a5d840:   0000000081ddd366 00007f0464a5d890
+0x00007f0464a5d850:   0000000081df2350 0000000000000000
+0x00007f0464a5d860:   0000000081ddd3b0 00007f0464a5d828 
+
+Instructions: (pc=0x00007f0463f78e9f)
+0x00007f0463f78e7f:   48 89 5d c0 48 89 5d a0 48 c7 45 a8 00 00 00 00
+0x00007f0463f78e8f:   48 83 7b 08 00 74 09 48 8d 7d a0 e8 e1 1a 21 00
+0x00007f0463f78e9f:   4d 8b 3c 24 4c 89 ff e8 65 8f fd ff 41 89 c5 48
+0x00007f0463f78eaf:   98 4c 8d 60 01 4c 89 e7 e8 14 29 1c 00 48 85 c0 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007f045c009000 is a thread
+RCX=0x00007f045c0064b0 is an unknown value
+RDX=0x00007f04646f70e0: <offset 0xcfa0e0> in /usr/local/jdk1.7.0_17/jre/lib/amd64/server/libjvm.so at 0x00007f04639fd000
+RSP=0x00007f0464a5d670 is pointing into the stack for thread: 0x00007f045c009000
+RBP=0x00007f0464a5d6e0 is pointing into the stack for thread: 0x00007f045c009000
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00007f045c0091d8 is an unknown value
+R8 =0x00007f04646f2620: <offset 0xcf5620> in /usr/local/jdk1.7.0_17/jre/lib/amd64/server/libjvm.so at 0x00007f04639fd000
+R9 =0x00000000d84fa2b8 is an oop
+org.sqlite.NativeDB 
+ - klass: 'org/sqlite/NativeDB'
+R10=0x0000000000000004 is an unknown value
+R11=0x00007f04646f70e8: <offset 0xcfa0e8> in /usr/local/jdk1.7.0_17/jre/lib/amd64/server/libjvm.so at 0x00007f04639fd000
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x00007f0464a5d7b8 is pointing into the stack for thread: 0x00007f045c009000
+R15=0x00007f045c009000 is a thread
+
+
+Stack: [0x00007f046495e000,0x00007f0464a5f000],  sp=0x00007f0464a5d670,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x57be9f]  jni_GetStringUTFChars+0x9f
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  org.sqlite.NativeDB.prepare(Ljava/lang/String;)J+0
+j  org.sqlite.DB.prepare(Lorg/sqlite/Stmt;)V+21
+j  org.sqlite.Stmt.executeQuery(Ljava/lang/String;)Ljava/sql/ResultSet;+14
+j  packages.selectdb.read(Ljava/lang/String;)Ljava/sql/ResultSet;+30
+j  packages.Handler.getName()Ljava/lang/String;+4
+j  packages.Lekerdez1.main([Ljava/lang/String;)V+20
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f045c0f2800 JavaThread "Service Thread" daemon [_thread_blocked, id=6342, stack(0x00007f0459d02000,0x00007f0459e03000)]
+  0x00007f045c0f0800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6341, stack(0x00007f0459e03000,0x00007f0459f04000)]
+  0x00007f045c0ed800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=6340, stack(0x00007f0459f04000,0x00007f045a005000)]
+  0x00007f045c0eb800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6339, stack(0x00007f045a005000,0x00007f045a106000)]
+  0x00007f045c09e800 JavaThread "Finalizer" daemon [_thread_blocked, id=6338, stack(0x00007f045a106000,0x00007f045a207000)]
+  0x00007f045c09c000 JavaThread "Reference Handler" daemon [_thread_blocked, id=6337, stack(0x00007f045a207000,0x00007f045a308000)]
+=>0x00007f045c009000 JavaThread "main" [_thread_in_vm, id=6331, stack(0x00007f046495e000,0x00007f0464a5f000)]
+
+Other Threads:
+  0x00007f045c094800 VMThread [stack: 0x00007f045a308000,0x00007f045a409000] [id=6336]
+  0x00007f045c105800 WatcherThread [stack: 0x00007f0459c01000,0x00007f0459d02000] [id=6343]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 36224K, used 16513K [0x00000000d7960000, 0x00000000dc020000, 0x0000000100000000)
+  eden space 31104K, 40% used [0x00000000d7960000,0x00000000d8595ef8,0x00000000d97c0000)
+  from space 5120K, 78% used [0x00000000d97c0000,0x00000000d9baa550,0x00000000d9cc0000)
+  to   space 5120K, 0% used [0x00000000dbb20000,0x00000000dbb20000,0x00000000dc020000)
+ ParOldGen       total 82752K, used 8K [0x0000000086c00000, 0x000000008bcd0000, 0x00000000d7960000)
+  object space 82752K, 0% used [0x0000000086c00000,0x0000000086c02000,0x000000008bcd0000)
+ PSPermGen       total 21248K, used 4091K [0x0000000081a00000, 0x0000000082ec0000, 0x0000000086c00000)
+  object space 21248K, 19% used [0x0000000081a00000,0x0000000081dfeec0,0x0000000082ec0000)
+
+Card table byte_map: [0x00007f045bc0c000,0x00007f045c000000] byte_map_base: 0x00007f045b7ff000
+
+Polling page: 0x00007f046495c000
+
+Code Cache  [0x00007f046017d000, 0x00007f04603ed000, 0x00007f046317d000)
+ total_blobs=305 nmethods=104 adapters=153 free_code_cache=48540Kb largest_free_block=49677504
+
+Compilation events (10 events):
+Event: 0.819 Thread 0x00007f045c0ed800   97             java.security.DigestInputStream::read (31 bytes)
+Event: 0.827 Thread 0x00007f045c0ed800 nmethod 97 0x00007f046020fcd0 code [0x00007f046020fe80, 0x00007f0460210410]
+Event: 0.835 Thread 0x00007f045c0ed800   98             sun.security.provider.MD5::implCompress (1508 bytes)
+Event: 0.855 Thread 0x00007f045c0ed800 nmethod 98 0x00007f0460213010 code [0x00007f0460213160, 0x00007f0460213da8]
+Event: 0.855 Thread 0x00007f045c0ed800   99             sun.security.provider.ByteArrayAccess::b2iLittle64 (586 bytes)
+Event: 0.857 Thread 0x00007f045c0ed800 nmethod 99 0x00007f046020f910 code [0x00007f046020fa40, 0x00007f046020fbf8]
+Event: 0.857 Thread 0x00007f045c0f0800 nmethod 96 0x00007f046021a0d0 code [0x00007f046021a360, 0x00007f046021b1e8]
+Event: 0.857 Thread 0x00007f045c0ed800    4 % !         org.sqlite.SQLiteJDBCLoader::md5sum @ 25 (104 bytes)
+Event: 0.862 Thread 0x00007f045c0ed800 nmethod 4% 0x00007f0460212650 code [0x00007f0460212820, 0x00007f0460212be0]
+Event: 0.874 Thread 0x00007f045c0f0800  100             sun.net.www.ParseUtil::encodePath (336 bytes)
+
+GC Heap History (2 events):
+Event: 0.515 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 36224K, used 31104K [0x00000000d7960000, 0x00000000da1c0000, 0x0000000100000000)
+  eden space 31104K, 100% used [0x00000000d7960000,0x00000000d97c0000,0x00000000d97c0000)
+  from space 5120K, 0% used [0x00000000d9cc0000,0x00000000d9cc0000,0x00000000da1c0000)
+  to   space 5120K, 0% used [0x00000000d97c0000,0x00000000d97c0000,0x00000000d9cc0000)
+ ParOldGen       total 82752K, used 0K [0x0000000086c00000, 0x000000008bcd0000, 0x00000000d7960000)
+  object space 82752K, 0% used [0x0000000086c00000,0x0000000086c00000,0x000000008bcd0000)
+ PSPermGen       total 21248K, used 2950K [0x0000000081a00000, 0x0000000082ec0000, 0x0000000086c00000)
+  object space 21248K, 13% used [0x0000000081a00000,0x0000000081ce18e8,0x0000000082ec0000)
+Event: 0.560 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 36224K, used 4009K [0x00000000d7960000, 0x00000000dc020000, 0x0000000100000000)
+  eden space 31104K, 0% used [0x00000000d7960000,0x00000000d7960000,0x00000000d97c0000)
+  from space 5120K, 78% used [0x00000000d97c0000,0x00000000d9baa550,0x00000000d9cc0000)
+  to   space 5120K, 0% used [0x00000000dbb20000,0x00000000dbb20000,0x00000000dc020000)
+ ParOldGen       total 82752K, used 8K [0x0000000086c00000, 0x000000008bcd0000, 0x00000000d7960000)
+  object space 82752K, 0% used [0x0000000086c00000,0x0000000086c02000,0x000000008bcd0000)
+ PSPermGen       total 21248K, used 2950K [0x0000000081a00000, 0x0000000082ec0000, 0x0000000086c00000)
+  object space 21248K, 13% used [0x0000000081a00000,0x0000000081ce18e8,0x0000000082ec0000)
+}
+
+Deoptimization events (7 events):
+Event: 0.328 Thread 0x00007f045c009000 Uncommon trap -12 fr.pc 0x00007f04601f5f4c
+Event: 0.614 Thread 0x00007f045c009000 Uncommon trap -34 fr.pc 0x00007f04601ee83c
+Event: 0.614 Thread 0x00007f045c009000 Uncommon trap -83 fr.pc 0x00007f04601eecc8
+Event: 0.614 Thread 0x00007f045c009000 Uncommon trap -83 fr.pc 0x00007f04601fbd20
+Event: 0.697 Thread 0x00007f045c009000 Uncommon trap -83 fr.pc 0x00007f04601e370c
+Event: 0.815 Thread 0x00007f045c009000 Uncommon trap 18 fr.pc 0x00007f046020ee0c
+Event: 0.816 Thread 0x00007f045c009000 Uncommon trap -83 fr.pc 0x00007f0460201554
+
+Internal exceptions (10 events):
+Event: 0.715 Thread 0x00007f045c009000 Threw 0x00000000d84a9870 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 0.716 Thread 0x00007f045c009000 Threw 0x00000000d84adf10 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 0.717 Thread 0x00007f045c009000 Threw 0x00000000d84b1238 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 0.718 Thread 0x00007f045c009000 Threw 0x00000000d84b7378 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 0.719 Thread 0x00007f045c009000 Threw 0x00000000d84be6e0 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 0.816 Thread 0x00007f045c009000 Implicit null exception at 0x00007f0460200ed2 to 0x00007f0460201531
+Event: 0.874 Thread 0x00007f045c009000 Threw 0x00000000d84f7818 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 0.875 Thread 0x00007f045c009000 Threw 0x00000000d84fb070 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 0.876 Thread 0x00007f045c009000 Threw 0x00000000d85046a8 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 0.877 Thread 0x00007f045c009000 Threw 0x00000000d850f958 at /HUDSON/workspace/jdk7u17-2-build-linux-amd64-product/jdk7u17/hotspot/src/share/vm/prims/jvm.cpp:1166
+
+Events (10 events):
+Event: 0.877 loading class 0x00007f045cbf87c0
+Event: 0.877 loading class 0x00007f045cbf87c0 done
+Event: 0.877 loading class 0x00007f045cbf5f90
+Event: 0.878 loading class 0x00007f045cbf5f90 done
+Event: 0.878 loading class 0x00007f045cbf5e90
+Event: 0.878 loading class 0x00007f045cbf5e90 done
+Event: 0.879 loading class 0x00007f045c0740a0
+Event: 0.879 loading class 0x00007f045c0740a0 done
+Event: 0.879 loading class 0x00007f045c0a3e70
+Event: 0.879 loading class 0x00007f045c0a3e70 done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 fd:01 4058053                            /usr/local/jdk1.7.0_17/bin/java
+00600000-00601000 rw-p 00000000 fd:01 4058053                            /usr/local/jdk1.7.0_17/bin/java
+00f88000-00fa9000 rw-p 00000000 00:00 0                                  [heap]
+81a00000-82ec0000 rw-p 00000000 00:00 0 
+82ec0000-86c00000 rw-p 00000000 00:00 0 
+86c00000-8bcd0000 rw-p 00000000 00:00 0 
+8bcd0000-d7960000 rw-p 00000000 00:00 0 
+d7960000-dc020000 rw-p 00000000 00:00 0 
+dc020000-100000000 rw-p 00000000 00:00 0 
+3341600000-3341621000 r-xp 00000000 fd:01 392862                         /lib64/ld-2.17.90.so
+3341820000-3341821000 r--p 00020000 fd:01 392862                         /lib64/ld-2.17.90.so
+3341821000-3341822000 rw-p 00021000 fd:01 392862                         /lib64/ld-2.17.90.so
+3341822000-3341823000 rw-p 00000000 00:00 0 
+3341a00000-3341a02000 r-xp 00000000 fd:01 399019                         /lib64/libdl-2.17.90.so
+3341a02000-3341c02000 ---p 00002000 fd:01 399019                         /lib64/libdl-2.17.90.so
+3341c02000-3341c03000 r--p 00002000 fd:01 399019                         /lib64/libdl-2.17.90.so
+3341c03000-3341c04000 rw-p 00003000 fd:01 399019                         /lib64/libdl-2.17.90.so
+3341e00000-3341fa4000 r-xp 00000000 fd:01 394628                         /lib64/libc-2.17.90.so
+3341fa4000-33421a3000 ---p 001a4000 fd:01 394628                         /lib64/libc-2.17.90.so
+33421a3000-33421a7000 r--p 001a3000 fd:01 394628                         /lib64/libc-2.17.90.so
+33421a7000-33421a9000 rw-p 001a7000 fd:01 394628                         /lib64/libc-2.17.90.so
+33421a9000-33421ad000 rw-p 00000000 00:00 0 
+3342200000-3342219000 r-xp 00000000 fd:01 399028                         /lib64/libpthread-2.17.90.so
+3342219000-3342418000 ---p 00019000 fd:01 399028                         /lib64/libpthread-2.17.90.so
+3342418000-3342419000 r--p 00018000 fd:01 399028                         /lib64/libpthread-2.17.90.so
+3342419000-334241a000 rw-p 00019000 fd:01 399028                         /lib64/libpthread-2.17.90.so
+334241a000-334241e000 rw-p 00000000 00:00 0 
+3342600000-3342701000 r-xp 00000000 fd:01 399032                         /lib64/libm-2.17.90.so
+3342701000-3342900000 ---p 00101000 fd:01 399032                         /lib64/libm-2.17.90.so
+3342900000-3342901000 r--p 00100000 fd:01 399032                         /lib64/libm-2.17.90.so
+3342901000-3342902000 rw-p 00101000 fd:01 399032                         /lib64/libm-2.17.90.so
+3342a00000-3342a07000 r-xp 00000000 fd:01 399029                         /lib64/librt-2.17.90.so
+3342a07000-3342c06000 ---p 00007000 fd:01 399029                         /lib64/librt-2.17.90.so
+3342c06000-3342c07000 r--p 00006000 fd:01 399029                         /lib64/librt-2.17.90.so
+3342c07000-3342c08000 rw-p 00007000 fd:01 399029                         /lib64/librt-2.17.90.so
+7f0418000000-7f0418021000 rw-p 00000000 00:00 0 
+7f0418021000-7f041c000000 ---p 00000000 00:00 0 
+7f041c000000-7f041c021000 rw-p 00000000 00:00 0 
+7f041c021000-7f0420000000 ---p 00000000 00:00 0 
+7f0420000000-7f042048a000 rw-p 00000000 00:00 0 
+7f042048a000-7f0424000000 ---p 00000000 00:00 0 
+7f0424000000-7f04242f6000 rw-p 00000000 00:00 0 
+7f04242f6000-7f0428000000 ---p 00000000 00:00 0 
+7f0428000000-7f0428021000 rw-p 00000000 00:00 0 
+7f0428021000-7f042c000000 ---p 00000000 00:00 0 
+7f042e16f000-7f0434000000 r--p 00000000 fd:01 686320                     /usr/lib/locale/locale-archive
+7f0434000000-7f0434021000 rw-p 00000000 00:00 0 
+7f0434021000-7f0438000000 ---p 00000000 00:00 0 
+7f0438000000-7f0438021000 rw-p 00000000 00:00 0 
+7f0438021000-7f043c000000 ---p 00000000 00:00 0 
+7f043c000000-7f043c021000 rw-p 00000000 00:00 0 
+7f043c021000-7f0440000000 ---p 00000000 00:00 0 
+7f0443104000-7f0448000000 rw-p 00000000 00:00 0 
+7f0448000000-7f0448021000 rw-p 00000000 00:00 0 
+7f0448021000-7f044c000000 ---p 00000000 00:00 0 
+7f044c000000-7f044c021000 rw-p 00000000 00:00 0 
+7f044c021000-7f0450000000 ---p 00000000 00:00 0 
+7f0450000000-7f0450021000 rw-p 00000000 00:00 0 
+7f0450021000-7f0454000000 ---p 00000000 00:00 0 
+7f0454000000-7f0454021000 rw-p 00000000 00:00 0 
+7f0454021000-7f0458000000 ---p 00000000 00:00 0 
+7f04591a1000-7f0459399000 rw-p 00000000 00:00 0 
+7f0459399000-7f045941d000 r-xp 00000000 fd:01 7501                       /tmp/sqlite-3.7.2-libsqlitejdbc.so
+7f045941d000-7f045961d000 ---p 00084000 fd:01 7501                       /tmp/sqlite-3.7.2-libsqlitejdbc.so
+7f045961d000-7f045961e000 r--p 00084000 fd:01 7501                       /tmp/sqlite-3.7.2-libsqlitejdbc.so
+7f045961e000-7f0459621000 rw-p 00085000 fd:01 7501                       /tmp/sqlite-3.7.2-libsqlitejdbc.so
+7f0459621000-7f0459625000 r--s 0008a000 fd:01 4057970                    /usr/local/jdk1.7.0_17/jre/lib/jsse.jar
+7f0459625000-7f0459626000 r--s 00001000 fd:01 3405541                    /home/gabor/glassfish-4.0/javadb/lib/derbyrun.jar
+7f0459626000-7f0459629000 r--s 00027000 fd:01 3405480                    /home/gabor/glassfish-4.0/javadb/lib/derbytools.jar
+7f0459629000-7f045962d000 r--s 00037000 fd:01 3405540                    /home/gabor/glassfish-4.0/javadb/lib/derbynet.jar
+7f045962d000-7f0459632000 r--s 0007b000 fd:01 3405450                    /home/gabor/glassfish-4.0/javadb/lib/derbyclient.jar
+7f0459632000-7f0459634000 r--s 00017000 fd:01 3405080                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_zh_TW.jar
+7f0459634000-7f0459636000 r--s 00016000 fd:01 3405075                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_zh_CN.jar
+7f0459636000-7f0459639000 r--s 0001a000 fd:01 3405297                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_ru.jar
+7f0459639000-7f045963b000 r--s 00014000 fd:01 3405077                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_pt_BR.jar
+7f045963b000-7f045963d000 r--s 00015000 fd:01 3405295                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_pl.jar
+7f045963d000-7f045963f000 r--s 00018000 fd:01 3405079                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_ko_KR.jar
+7f045963f000-7f0459641000 r--s 0001a000 fd:01 3405076                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_ja_JP.jar
+7f0459641000-7f0459643000 r--s 00016000 fd:01 3405293                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_it.jar
+7f0459643000-7f0459645000 r--s 00015000 fd:01 3405294                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_hu.jar
+7f0459645000-7f0459648000 r--s 00017000 fd:01 3405298                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_fr.jar
+7f0459648000-7f045964a000 r--s 00016000 fd:01 3405296                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_es.jar
+7f045964a000-7f045964d000 r--s 00017000 fd:01 3405078                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_de_DE.jar
+7f045964d000-7f045964f000 r--s 00015000 fd:01 3405299                    /home/gabor/glassfish-4.0/javadb/lib/derbyLocale_cs.jar
+7f045964f000-7f0459678000 r--s 0025c000 fd:01 3405611                    /home/gabor/glassfish-4.0/javadb/lib/derby.jar
+7f0459678000-7f0459679000 r--s 00003000 fd:01 3404677                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-media-moxy.jar
+7f0459679000-7f045967a000 r--s 00004000 fd:01 3405501                    /home/gabor/glassfish-4.0/glassfish/modules/metro-glue.jar
+7f045967a000-7f045967b000 r--s 00000000 fd:01 3404186                    /home/gabor/glassfish-4.0/glassfish/modules/weld-integration-fragment.jar
+7f045967b000-7f0459681000 r--s 0003f000 fd:01 3404552                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.dbws.jar
+7f0459681000-7f0459683000 r--s 00003000 fd:01 3404853                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-gf-ejb.jar
+7f0459683000-7f0459684000 r--s 00003000 fd:01 3405396                    /home/gabor/glassfish-4.0/glassfish/modules/jsf-connector.jar
+7f0459684000-7f0459687000 r--s 0001e000 fd:01 3404629                    /home/gabor/glassfish-4.0/glassfish/modules/console-common-full-plugin.jar
+7f0459687000-7f0459689000 r--s 00007000 fd:01 3405139                    /home/gabor/glassfish-4.0/glassfish/modules/resources-runtime.jar
+7f0459689000-7f045968a000 r--s 00006000 fd:01 3404258                    /home/gabor/glassfish-4.0/glassfish/modules/tyrus-container-grizzly.jar
+7f045968a000-7f045968b000 r--s 00004000 fd:01 3404864                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-gf-cdi.jar
+7f045968b000-7f045968d000 r--s 00018000 fd:01 3405278                    /home/gabor/glassfish-4.0/glassfish/modules/concurrent-impl.jar
+7f045968d000-7f045968f000 r--s 00006000 fd:01 3404760                    /home/gabor/glassfish-4.0/glassfish/modules/console-ejb-lite-plugin.jar
+7f045968f000-7f0459691000 r--s 00005000 fd:01 3405188                    /home/gabor/glassfish-4.0/glassfish/modules/gf-jms-injection.jar
+7f0459691000-7f0459695000 r--s 00036000 fd:01 3405440                    /home/gabor/glassfish-4.0/glassfish/modules/cmp-enhancer.jar
+7f0459695000-7f045969d000 r--s 00087000 fd:01 3404935                    /home/gabor/glassfish-4.0/glassfish/modules/cmp-support-sqlstore.jar
+7f045969d000-7f04596a0000 r--s 0003b000 fd:01 3405275                    /home/gabor/glassfish-4.0/glassfish/modules/cmp-support-ejb.jar
+7f04596a0000-7f04596a1000 r--s 00001000 fd:01 3405335                    /home/gabor/glassfish-4.0/glassfish/modules/jstl-connector.jar
+7f04596a1000-7f04596a3000 r--s 00010000 fd:01 3405035                    /home/gabor/glassfish-4.0/glassfish/modules/ejb-full-container.jar
+7f04596a3000-7f04596a7000 r--s 0002b000 fd:01 3405186                    /home/gabor/glassfish-4.0/glassfish/modules/connectors-admin.jar
+7f04596a7000-7f04596a8000 r--s 0000a000 fd:01 3404721                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-batch-commands.jar
+7f04596a8000-7f04596aa000 r--s 00009000 fd:01 3405402                    /home/gabor/glassfish-4.0/glassfish/modules/jpa-container.jar
+7f04596aa000-7f04596ad000 r--s 00021000 fd:01 3405040                    /home/gabor/glassfish-4.0/glassfish/modules/tyrus-core.jar
+7f04596ad000-7f04596af000 r--s 0000b000 fd:01 3403899                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.jpa.modelgen.processor.jar
+7f04596af000-7f04596b1000 r--s 00015000 fd:01 3405437                    /home/gabor/glassfish-4.0/glassfish/modules/ejb.security.jar
+7f04596b1000-7f04596b3000 r--s 00010000 fd:01 3404929                    /home/gabor/glassfish-4.0/glassfish/modules/webservices.security.jar
+7f04596b3000-7f04596b6000 r--s 00013000 fd:01 3405571                    /home/gabor/glassfish-4.0/glassfish/modules/orb-iiop.jar
+7f04596b6000-7f04596b7000 r--s 00001000 fd:01 3404986                    /home/gabor/glassfish-4.0/glassfish/modules/jsonp-jaxrs.jar
+7f04596b7000-7f04596b9000 r--s 00008000 fd:01 3405570                    /home/gabor/glassfish-4.0/glassfish/modules/soap-tcp.jar
+7f04596b9000-7f04596d7000 r--s 001b8000 fd:01 3405466                    /home/gabor/glassfish-4.0/glassfish/modules/ant.jar
+7f04596d7000-7f04596d9000 r--s 00001000 fd:01 3405200                    /home/gabor/glassfish-4.0/glassfish/modules/gf-jpa-connector.jar
+7f04596d9000-7f04596db000 r--s 0000f000 fd:01 3404861                    /home/gabor/glassfish-4.0/glassfish/modules/webservices-connector.jar
+7f04596db000-7f04596ea000 r--s 00108000 fd:01 3404597                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.jpa.jar
+7f04596ea000-7f04596ec000 r--s 00005000 fd:01 3404914                    /home/gabor/glassfish-4.0/glassfish/modules/concurrent-connector.jar
+7f04596ec000-7f04596ed000 r--s 00001000 fd:01 3404524                    /home/gabor/glassfish-4.0/glassfish/modules/com.ibm.jbatch-ri-spi.jar
+7f04596ed000-7f04596ee000 r--s 00003000 fd:01 3404689                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-batch-connector.jar
+7f04596ee000-7f04596f0000 r--s 00002000 fd:01 3404223                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-container-servlet.jar
+7f04596f0000-7f04596f2000 r--s 00007000 fd:01 3405036                    /home/gabor/glassfish-4.0/glassfish/modules/console-ejb-plugin.jar
+7f04596f2000-7f04596f6000 r--s 00018000 fd:01 3404189                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-corba-csiv2-idl.jar
+7f04596f6000-7f0459712000 r--s 00161000 fd:01 3404599                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-corba-orb.jar
+7f0459712000-7f0459718000 r--s 00058000 fd:01 3405672                    /home/gabor/glassfish-4.0/glassfish/modules/jts.jar
+7f0459718000-7f045971a000 r--s 00006000 fd:01 3405030                    /home/gabor/glassfish-4.0/glassfish/modules/console-jts-plugin.jar
+7f045971a000-7f045971e000 r--s 00026000 fd:01 3405034                    /home/gabor/glassfish-4.0/glassfish/modules/console-jms-plugin.jar
+7f045971e000-7f0459725000 r--s 00071000 fd:01 3404553                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.moxy.jar
+7f0459725000-7f0459727000 r--s 0000a000 fd:01 3404924                    /home/gabor/glassfish-4.0/glassfish/modules/console-corba-plugin.jar
+7f0459727000-7f045972a000 r--s 0001f000 fd:01 3404254                    /home/gabor/glassfish-4.0/glassfish/modules/schema2beans-repackaged.jar
+7f045972a000-7f045972c000 r--s 00011000 fd:01 3405273                    /home/gabor/glassfish-4.0/glassfish/modules/cmp-ejb-mapping.jar
+7f045972c000-7f045972f000 r--s 00017000 fd:01 3404926                    /home/gabor/glassfish-4.0/glassfish/modules/entitybean-container.jar
+7f045972f000-7f0459731000 r--s 00004000 fd:01 3405190                    /home/gabor/glassfish-4.0/glassfish/modules/cmp-internal-api.jar
+7f0459731000-7f0459732000 r--s 00001000 fd:01 3405137                    /home/gabor/glassfish-4.0/glassfish/modules/tyrus-spi.jar
+7f0459732000-7f0459733000 r--s 00001000 fd:01 3404097                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-media-json-processing.jar
+7f0459733000-7f0459735000 r--s 0000d000 fd:01 3405205                    /home/gabor/glassfish-4.0/glassfish/modules/mimepull.jar
+7f0459735000-7f0459739000 r--s 00038000 fd:01 3405467                    /home/gabor/glassfish-4.0/glassfish/modules/jsr109-impl.jar
+7f0459739000-7f045973c000 r--s 00018000 fd:01 3405536                    /home/gabor/glassfish-4.0/glassfish/modules/jms-admin.jar
+7f045973c000-7f0459749000 r--s 000d3000 fd:01 3405393                    /home/gabor/glassfish-4.0/glassfish/modules/ejb-container.jar
+7f0459749000-7f0459750000 r--s 00044000 fd:01 3404582                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-grizzly-extra-all.jar
+7f0459750000-7f0459752000 r--s 00006000 fd:01 3404633                    /home/gabor/glassfish-4.0/glassfish/modules/connectors-inbound-runtime.jar
+7f0459752000-7f0459754000 r--s 00013000 fd:01 3405565                    /home/gabor/glassfish-4.0/glassfish/modules/jms-core.jar
+7f0459754000-7f0459757000 r--s 00014000 fd:01 3404687                    /home/gabor/glassfish-4.0/glassfish/modules/console-concurrent-plugin.jar
+7f0459757000-7f0459759000 r--s 00003000 fd:01 3405471                    /home/gabor/glassfish-4.0/glassfish/modules/jdbc-config.jar
+7f0459759000-7f0459761000 r--s 00078000 fd:01 3405031                    /home/gabor/glassfish-4.0/glassfish/modules/connectors-runtime.jar
+7f0459761000-7f0459763000 r--s 00012000 fd:01 3405438                    /home/gabor/glassfish-4.0/glassfish/modules/jdbc-runtime.jar
+7f0459763000-7f0459767000 r--s 0003a000 fd:01 3404251                    /home/gabor/glassfish-4.0/glassfish/modules/trilead-ssh2-repackaged.jar
+7f0459767000-7f0459769000 r--s 00009000 fd:01 3404992                    /home/gabor/glassfish-4.0/glassfish/modules/cluster-ssh.jar
+7f0459769000-7f045976b000 r--s 00008000 fd:01 3404824                    /home/gabor/glassfish-4.0/glassfish/modules/cluster-common.jar
+7f045976b000-7f045976f000 r--s 00038000 fd:01 3404859                    /home/gabor/glassfish-4.0/glassfish/modules/cluster-admin.jar
+7f045976f000-7f0459771000 r--s 0000d000 fd:01 3405506                    /home/gabor/glassfish-4.0/glassfish/modules/jdbc-admin.jar
+7f0459771000-7f0459778000 r--s 0003c000 fd:01 3404587                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.asm.jar
+7f0459778000-7f04597b6000 r--s 00482000 fd:01 3404554                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.core.jar
+7f04597b6000-7f04597d4000 r--s 00137000 fd:01 3404213                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.jpa.jpql.jar
+7f04597d4000-7f04597d6000 r--s 00005000 fd:01 3405032                    /home/gabor/glassfish-4.0/glassfish/modules/javamail-connector.jar
+7f04597d6000-7f04597d7000 r--s 00004000 fd:01 3405198                    /home/gabor/glassfish-4.0/glassfish/modules/javamail-runtime.jar
+7f04597d7000-7f04597d8000 r--s 00004000 fd:01 3405399                    /home/gabor/glassfish-4.0/glassfish/modules/javaee-kernel.jar
+7f04597d8000-7f04597d9000 r--s 00000000 fd:01 3403926                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-oracle-jdbc-driver-packages.jar
+7f04597d9000-7f04597da000 r--s 00001000 fd:01 3404927                    /home/gabor/glassfish-4.0/glassfish/modules/jspcaching-connector.jar
+7f04597da000-7f04597db000 r--s 00003000 fd:01 3405203                    /home/gabor/glassfish-4.0/glassfish/modules/gf-jms-connector.jar
+7f04597db000-7f04597de000 r--s 00008000 fd:01 3404866                    /home/gabor/glassfish-4.0/glassfish/modules/shoal-gms-api.jar
+7f04597de000-7f04597e0000 r--s 00005000 fd:01 3404862                    /home/gabor/glassfish-4.0/glassfish/modules/gms-bootstrap.jar
+7f04597e0000-7f04597e2000 r--s 00011000 fd:01 3405606                    /home/gabor/glassfish-4.0/glassfish/modules/web-ha.jar
+7f04597e2000-7f04597e4000 r--s 00004000 fd:01 3404751                    /home/gabor/glassfish-4.0/glassfish/modules/tyrus-container-servlet.jar
+7f04597e4000-7f04597e5000 r--s 00001000 fd:01 3404075                    /home/gabor/glassfish-4.0/glassfish/modules/tyrus-container-glassfish-cdi.jar
+7f04597e5000-7f04597e7000 r--s 00000000 fd:01 3404052                    /home/gabor/glassfish-4.0/glassfish/modules/webservices-extra-jdk-packages.jar
+7f04597e7000-7f04597eb000 r--s 00028000 fd:01 3405135                    /home/gabor/glassfish-4.0/glassfish/modules/stax2-api.jar
+7f04597eb000-7f04597f0000 r--s 00066000 fd:01 3404725                    /home/gabor/glassfish-4.0/glassfish/modules/antlr-repackaged.jar
+7f04597f0000-7f04597f8000 r--s 00056000 fd:01 3404138                    /home/gabor/glassfish-4.0/glassfish/modules/com.ibm.jbatch-runtime-all.jar
+7f04597f8000-7f04597fa000 r--s 00007000 fd:01 3404632                    /home/gabor/glassfish-4.0/glassfish/modules/bean-validator-cdi.jar
+7f04597fa000-7f04597fb000 r--s 00003000 fd:01 3405136                    /home/gabor/glassfish-4.0/glassfish/modules/gf-weld-connector.jar
+7f04597fb000-7f04597fd000 r--s 00004000 fd:01 3405589                    /home/gabor/glassfish-4.0/glassfish/modules/web-sse.jar
+7f04597fd000-7f04597ff000 r--s 00006000 fd:01 3405395                    /home/gabor/glassfish-4.0/glassfish/modules/web-embed-api.jar
+7f04597ff000-7f0459800000 r--s 0000a000 fd:01 3405468                    /home/gabor/glassfish-4.0/glassfish/modules/websecurity.jar
+7f0459800000-7f0459802000 r--s 00008000 fd:01 3404869                    /home/gabor/glassfish-4.0/glassfish/modules/web-gui-plugin-common.jar
+7f0459802000-7f0459804000 r--s 00001000 fd:01 3405500                    /home/gabor/glassfish-4.0/glassfish/modules/admin-core.jar
+7f0459804000-7f0459811000 r--s 000fe000 fd:01 3405567                    /home/gabor/glassfish-4.0/glassfish/modules/web-core.jar
+7f0459811000-7f0459817000 r--s 00036000 fd:01 3404077                    /home/gabor/glassfish-4.0/glassfish/modules/jmxremote_optional-repackaged.jar
+7f0459817000-7f0459819000 r--s 0000e000 fd:01 3404525                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-mbeanserver.jar
+7f0459819000-7f0459821000 r--s 00064000 fd:01 3405192                    /home/gabor/glassfish-4.0/glassfish/modules/amx-core.jar
+7f0459821000-7f0459824000 r--s 00011000 fd:01 3405504                    /home/gabor/glassfish-4.0/glassfish/modules/amx-javaee.jar
+7f0459824000-7f0459828000 r--s 00029000 fd:01 3405590                    /home/gabor/glassfish-4.0/glassfish/modules/web-cli.jar
+7f0459828000-7f0459832000 r--s 00091000 fd:01 3405568                    /home/gabor/glassfish-4.0/glassfish/modules/web-glue.jar
+7f0459832000-7f0459835000 r--s 0001f000 fd:01 3405196                    /home/gabor/glassfish-4.0/glassfish/modules/weld-integration.jar
+7f0459835000-7f0459839000 r--s 00010000 fd:01 3405588                    /home/gabor/glassfish-4.0/glassfish/modules/stats77.jar
+7f0459839000-7f045983c000 r--s 00017000 fd:01 3405505                    /home/gabor/glassfish-4.0/glassfish/modules/web-naming.jar
+7f045983c000-7f045983e000 r--s 00017000 fd:01 3405569                    /home/gabor/glassfish-4.0/glassfish/modules/war-util.jar
+7f045983e000-7f0459840000 r--s 00006000 fd:01 3405042                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-mvc.jar
+7f0459840000-7f045984c000 r--s 0007f000 fd:01 3404868                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-common.jar
+7f045984c000-7f0459875000 r--s 001e2000 fd:01 3405400                    /home/gabor/glassfish-4.0/glassfish/modules/guava.jar
+7f0459875000-7f0459878000 r--s 00019000 fd:01 3404856                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-client.jar
+7f0459878000-7f045988a000 r--s 00094000 fd:01 3404855                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-server.jar
+7f045988a000-7f045988c000 r--s 0000a000 fd:01 3404071                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-container-servlet-core.jar
+7f045988c000-7f045988d000 r--s 00001000 fd:01 3404923                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-mvc-connector.jar
+7f045988d000-7f0459891000 r--s 000d1000 fd:01 3404586                    /home/gabor/glassfish-4.0/glassfish/modules/libpam4j-repackaged.jar
+7f0459891000-7f0459893000 r--s 00001000 fd:01 3405208                    /home/gabor/glassfish-4.0/glassfish/modules/ejb-internal-api.jar
+7f0459893000-7f0459895000 r--s 0000d000 fd:01 3404676                    /home/gabor/glassfish-4.0/glassfish/modules/jaspic.provider.framework.jar
+7f0459895000-7f0459896000 r--s 00002000 fd:01 3405187                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-ee-api.jar
+7f0459896000-7f045989d000 r--s 0004c000 fd:01 3405469                    /home/gabor/glassfish-4.0/glassfish/modules/security-ee.jar
+7f045989d000-7f045989f000 r--s 00001000 fd:01 3404989                    /home/gabor/glassfish-4.0/glassfish/modules/appclient-connector.jar
+7f045989f000-7f04598a1000 r--s 00001000 fd:01 3404756                    /home/gabor/glassfish-4.0/glassfish/modules/gf-connectors-connector.jar
+7f04598a1000-7f04598a2000 r--s 00004000 fd:01 3405204                    /home/gabor/glassfish-4.0/glassfish/modules/gf-ejb-connector.jar
+7f04598a2000-7f04598a4000 r--s 00006000 fd:01 3405197                    /home/gabor/glassfish-4.0/glassfish/modules/gf-web-connector.jar
+7f04598a4000-7f04598a6000 r--s 00006000 fd:01 3404819                    /home/gabor/glassfish-4.0/glassfish/modules/deployment-javaee-core.jar
+7f04598a6000-7f04598a8000 r--s 0000a000 fd:01 3404816                    /home/gabor/glassfish-4.0/glassfish/modules/deployment-javaee-full.jar
+7f04598a8000-7f04598ad000 r--s 0002a000 fd:01 3404513                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.antlr.jar
+7f04598ad000-7f04598b0000 r--s 00016000 fd:01 3404764                    /home/gabor/glassfish-4.0/glassfish/modules/monitoring-core.jar
+7f04598b0000-7f04598b2000 r--s 00005000 fd:01 3404095                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-corba-internal-api.jar
+7f04598b2000-7f04598c7000 r--s 000af000 fd:01 3404488                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-corba-omgapi.jar
+7f04598c7000-7f04598c9000 r--s 00002000 fd:01 3405464                    /home/gabor/glassfish-4.0/glassfish/modules/orb-enabler.jar
+7f04598c9000-7f04598cc000 r--s 0000c000 fd:01 3405401                    /home/gabor/glassfish-4.0/glassfish/modules/orb-connector.jar
+7f04598cc000-7f04598ce000 r--s 00009000 fd:01 3405277                    /home/gabor/glassfish-4.0/glassfish/modules/work-management.jar
+7f04598ce000-7f04598e3000 r--s 000dd000 fd:01 3404765                    /home/gabor/glassfish-4.0/glassfish/modules/jaxb-extra-osgi.jar
+7f04598e3000-7f04598e5000 r--s 00003000 fd:01 3404814                    /home/gabor/glassfish-4.0/glassfish/modules/jersey-mvc-jsp.jar
+7f04598e5000-7f04598e7000 r--s 0000f000 fd:01 3405673                    /home/gabor/glassfish-4.0/glassfish/modules/jta.jar
+7f04598e7000-7f04598e8000 r--s 00005000 fd:01 3404937                    /home/gabor/glassfish-4.0/glassfish/modules/tyrus-server.jar
+7f04598e8000-7f04598e9000 r--s 00002000 fd:01 3404934                    /home/gabor/glassfish-4.0/glassfish/modules/tyrus-client.jar
+7f04598e9000-7f04598ef000 r--s 0006d000 fd:01 3404684                    /home/gabor/glassfish-4.0/glassfish/modules/woodstox-core-asl.jar
+7f04598ef000-7f04598f1000 r--s 0000f000 fd:01 3404808                    /home/gabor/glassfish-4.0/glassfish/modules/cmp-generator-database.jar
+7f04598f1000-7f04598fe000 r--s 000ca000 fd:01 3404560                    /home/gabor/glassfish-4.0/glassfish/modules/j-interop-repackaged.jar
+7f04598fe000-7f0459900000 r--s 00000000 fd:01 3404933                    /home/gabor/glassfish-4.0/glassfish/modules/api-exporter.jar
+7f0459900000-7f0459904000 r--s 00028000 fd:01 3405276                    /home/gabor/glassfish-4.0/glassfish/modules/logging.jar
+7f0459904000-7f0459905000 r--s 00002000 fd:01 3404556                    /home/gabor/glassfish-4.0/glassfish/modules/simple-glassfish-api.jar
+7f0459905000-7f0459909000 r--s 0001c000 fd:01 3405148                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish.jar
+7f0459909000-7f045990d000 r--s 0001f000 fd:01 3404558                    /home/gabor/glassfish-4.0/glassfish/modules/flashlight-framework.jar
+7f045990d000-7f0459917000 r--s 000a0000 fd:01 3405337                    /home/gabor/glassfish-4.0/glassfish/modules/kernel.jar
+7f0459917000-7f045991a000 r--s 00013000 fd:01 3404485                    /home/gabor/glassfish-4.0/glassfish/modules/org.eclipse.persistence.oracle.jar
+7f045991a000-7f045991e000 r--s 00021000 fd:01 3404562                    /home/gabor/glassfish-4.0/glassfish/modules/tyrus-websocket-core.jar
+7f045991e000-7f0459925000 r--s 0003b000 fd:01 3404608                    /home/gabor/glassfish-4.0/glassfish/modules/dbschema-repackaged.jar
+7f0459925000-7f0459927000 r--s 00007000 fd:01 3405339                    /home/gabor/glassfish-4.0/glassfish/modules/ha-api.jar
+7f0459927000-7f045992a000 r--s 00014000 fd:01 3405195                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-naming.jar
+7f045992a000-7f0459930000 r--s 00027000 fd:01 3405206                    /home/gabor/glassfish-4.0/glassfish/modules/container-common.jar
+7f0459930000-7f0459932000 r--s 0000d000 fd:01 3404693                    /home/gabor/glassfish-4.0/glassfish/modules/nucleus-resources.jar
+7f0459932000-7f0459935000 r--s 00018000 fd:01 3404990                    /home/gabor/glassfish-4.0/glassfish/modules/resources-connector.jar
+7f0459935000-7f0459939000 r--s 00034000 fd:01 3404729                    /home/gabor/glassfish-4.0/glassfish/modules/jackson-core-asl.jar
+7f0459939000-7f045993b000 r--s 0000b000 fd:01 3404683                    /home/gabor/glassfish-4.0/glassfish/modules/ldapbp-repackaged.jar
+7f045993b000-7f045993d000 r--s 00003000 fd:01 3405189                    /home/gabor/glassfish-4.0/glassfish/modules/ssl-impl.jar
+7f045993d000-7f0459945000 r--s 0006b000 fd:01 3405194                    /home/gabor/glassfish-4.0/glassfish/modules/security.jar
+7f0459945000-7f0459949000 r--s 00017000 fd:01 3404680                    /home/gabor/glassfish-4.0/glassfish/modules/security-services.jar
+7f0459949000-7f045994f000 r--s 0004c000 fd:01 3405049                    /home/gabor/glassfish-4.0/glassfish/modules/admin-util.jar
+7f045994f000-7f0459951000 r--s 00004000 fd:01 3404713                    /home/gabor/glassfish-4.0/glassfish/modules/transaction-internal-api.jar
+7f0459951000-7f0459955000 r--s 00015000 fd:01 3404755                    /home/gabor/glassfish-4.0/glassfish/modules/connectors-internal-api.jar
+7f0459955000-7f0459957000 r--s 00008000 fd:01 3404930                    /home/gabor/glassfish-4.0/glassfish/modules/annotation-framework.jar
+7f0459957000-7f0459959000 r--s 0000a000 fd:01 3404918                    /home/gabor/glassfish-4.0/glassfish/modules/pfl-tf-tools.jar
+7f0459959000-7f045995c000 r--s 0000f000 fd:01 3404762                    /home/gabor/glassfish-4.0/glassfish/modules/pfl-basic-tools.jar
+7f045995c000-7f0459964000 r--s 0004b000 fd:01 3404997                    /home/gabor/glassfish-4.0/glassfish/modules/pfl-dynamic.jar
+7f0459964000-7f045996a000 r--s 0004f000 fd:01 3405274                    /home/gabor/glassfish-4.0/glassfish/modules/pfl-asm.jar
+7f045996a000-7f045996d000 r--s 00014000 fd:01 3405336                    /home/gabor/glassfish-4.0/glassfish/modules/pfl-tf.jar
+7f045996d000-7f0459973000 r--s 00027000 fd:01 3405132                    /home/gabor/glassfish-4.0/glassfish/modules/pfl-basic.jar
+7f0459973000-7f0459978000 r--s 0002c000 fd:01 3405398                    /home/gabor/glassfish-4.0/glassfish/modules/gmbal.jar
+7f0459978000-7f0459984000 r--s 0007d000 fd:01 3405038                    /home/gabor/glassfish-4.0/glassfish/modules/config-api.jar
+7f0459984000-7f0459988000 r--s 0001d000 fd:01 3404916                    /home/gabor/glassfish-4.0/glassfish/modules/internal-api.jar
+7f0459988000-7f045998b000 r--s 00027000 fd:01 3404686                    /home/gabor/glassfish-4.0/glassfish/modules/deployment-common.jar
+7f045998b000-7f045998d000 r--s 00009000 fd:01 3404818                    /home/gabor/glassfish-4.0/glassfish/modules/management-api.jar
+7f045998d000-7f04599a6000 r--s 0013f000 fd:01 3404583                    /home/gabor/glassfish-4.0/glassfish/modules/nucleus-grizzly-all.jar
+7f04599a6000-7f04599aa000 r--s 00012000 fd:01 3404993                    /home/gabor/glassfish-4.0/glassfish/modules/class-model.jar
+7f04599aa000-7f04599ac000 r--s 00006000 fd:01 3404928                    /home/gabor/glassfish-4.0/glassfish/modules/hk2-runlevel.jar
+7f04599ac000-7f04599b1000 r--s 0002c000 fd:01 3405046                    /home/gabor/glassfish-4.0/glassfish/modules/hk2-config.jar
+7f04599b1000-7f04599b2000 r--s 00001000 fd:01 3404919                    /home/gabor/glassfish-4.0/glassfish/modules/config-types.jar
+7f04599b2000-7f04599b3000 r--s 00000000 fd:01 3405470                    /home/gabor/glassfish-4.0/glassfish/modules/hk2.jar
+7f04599b3000-7f04599b5000 r--s 00002000 fd:01 3404519                    /home/gabor/glassfish-4.0/glassfish/modules/scattered-archive-api.jar
+7f04599b5000-7f04599bc000 r--s 00026000 fd:01 3404858                    /home/gabor/glassfish-4.0/glassfish/modules/glassfish-api.jar
+7f04599bc000-7f04599c1000 r--s 00046000 fd:01 3404639                    /home/gabor/glassfish-4.0/glassfish/modules/asm-all-repackaged.jar
+7f04599c1000-7f04599cc000 r--s 0006d000 fd:01 3404995                    /home/gabor/glassfish-4.0/glassfish/modules/common-util.jar
+7f04599cc000-7f04599ce000 r--s 0000b000 fd:01 3405133                    /home/gabor/glassfish-4.0/glassfish/modules/hk2-utils.jar
+7f04599ce000-7f04599d4000 r--s 0003e000 fd:01 3405404                    /home/gabor/glassfish-4.0/glassfish/modules/cglib.jar
+7f04599d4000-7f04599d5000 r--s 00004000 fd:01 3404526                    /home/gabor/glassfish-4.0/glassfish/modules/osgi-resource-locator.jar
+7f04599d5000-7f04599d9000 r--s 00018000 fd:01 3405280                    /home/gabor/glassfish-4.0/glassfish/modules/hk2-api.jar
+7f04599d9000-7f04599dc000 r--s 0001c000 fd:01 3404991                    /home/gabor/glassfish-4.0/glassfish/modules/hk2-locator.jar
+7f04599dc000-7f04599df000 r--s 0001a000 fd:01 3405439                    /home/gabor/glassfish-4.0/glassfish/modules/core.jar
+7f04599df000-7f04599ed000 r--s 000a8000 fd:01 3405671                    /home/gabor/glassfish-4.0/glassfish/modules/dol.jar
+7f04599ed000-7f04599ef000 r--s 00005000 fd:01 3405039                    /home/gabor/glassfish-4.0/glassfish/modules/persistence-common.jar
+7f04599ef000-7f04599f1000 r--s 0000e000 fd:01 3405465                    /home/gabor/glassfish-4.0/glassfish/modules/cmp-utility.jar
+7f04599f1000-7f04599f5000 r--s 00022000 fd:01 3405537                    /home/gabor/glassfish-4.0/glassfish/modules/cmp-model.jar
+7f04599f5000-7f04599f6000 r--s 00001000 fd:01 3403960                    /home/gabor/glassfish-4.0/glassfish/lib/embedded/glassfish-embedded-static-shell.jar
+7f04599f6000-7f04599f9000 r--s 00009000 fd:01 3404678                    /home/gabor/glassfish-4.0/glassfish/modules/javax.xml.rpc-api.jar
+7f04599f9000-7f04599fb000 r--s 00006000 fd:01 3404187                    /home/gabor/glassfish-4.0/glassfish/modules/javax.management.j2ee-api.jar
+7f04599fb000-7f04599fc000 r--s 00007000 fd:01 3404143                    /home/gabor/glassfish-4.0/glassfish/modules/javax.servlet.jsp.jstl-api.jar
+7f04599fc000-7f04599fd000 r--s 0000c000 fd:01 3404257                    /home/gabor/glassfish-4.0/glassfish/modules/javax.security.jacc-api.jar
+7f04599fd000-7f0459a00000 r--s 00015000 fd:01 3405146                    /home/gabor/glassfish-4.0/glassfish/modules/javax.servlet-api.jar
+7f0459a00000-7f0459a02000 r--s 0000a000 fd:01 3404489                    /home/gabor/glassfish-4.0/glassfish/modules/javax.xml.registry-api.jar
+7f0459a02000-7f0459a05000 r--s 0000d000 fd:01 3405394                    /home/gabor/glassfish-4.0/glassfish/modules/javax.ejb-api.jar
+7f0459a05000-7f0459a06000 r--s 00001000 fd:01 3404917                    /home/gabor/glassfish-4.0/glassfish/modules/javax.inject.jar
+7f0459a06000-7f0459a08000 r--s 00002000 fd:01 3404024                    /home/gabor/glassfish-4.0/glassfish/modules/javax.enterprise.concurrent-api.jar
+7f0459a08000-7f0459a0a000 r--s 0000c000 fd:01 3404606                    /home/gabor/glassfish-4.0/glassfish/modules/javax.enterprise.concurrent.jar
+7f0459a0a000-7f0459a10000 r--s 00022000 fd:01 3404679                    /home/gabor/glassfish-4.0/glassfish/modules/javax.persistence.jar
+7f0459a10000-7f0459a13000 r--s 0000a000 fd:01 3404120                    /home/gabor/glassfish-4.0/glassfish/modules/javax.enterprise.deploy-api.jar
+7f0459a13000-7f0459a15000 r--s 0000b000 fd:01 3404025                    /home/gabor/glassfish-4.0/glassfish/modules/javax.security.auth.message-api.jar
+7f0459a15000-7f0459a5c000 r--s 00312000 fd:01 3404717                    /home/gabor/glassfish-4.0/glassfish/modules/weld-osgi-bundle.jar
+7f0459a5c000-7f0459a87000 rw-p 00000000 00:00 0 
+7f0459a87000-7f0459b3d000 r--s 00b00000 fd:01 3404722                    /home/gabor/glassfish-4.0/glassfish/modules/webservices-osgi.jar
+7f0459b3d000-7f0459b65000 r--s 002b8000 fd:01 3404987                    /home/gabor/glassfish-4.0/glassfish/modules/javax.faces.jar
+7f0459b65000-7f0459ba4000 r--s 00325000 fd:01 3405140                    /home/gabor/glassfish-4.0/glassfish/modules/jaxb-osgi.jar
+7f0459ba4000-7f0459ba7000 r--s 00006000 fd:01 3404758                    /home/gabor/glassfish-4.0/glassfish/modules/javax.batch-api.jar
+7f0459ba7000-7f0459bb0000 r--s 0005a000 fd:01 3404492                    /home/gabor/glassfish-4.0/glassfish/modules/javax.servlet.jsp.jstl.jar
+7f0459bb0000-7f0459bc1000 r--s 000a2000 fd:01 3404822                    /home/gabor/glassfish-4.0/glassfish/modules/bean-validator.jar
+7f0459bc1000-7f0459bc3000 r--s 00006000 fd:01 3404863                    /home/gabor/glassfish-4.0/glassfish/modules/javax.transaction-api.jar
+7f0459bc3000-7f0459bca000 r--s 0007d000 fd:01 3405144                    /home/gabor/glassfish-4.0/glassfish/modules/javax.servlet.jsp.jar
+7f0459bca000-7f0459bcb000 r--s 00005000 fd:01 3404870                    /home/gabor/glassfish-4.0/glassfish/modules/javax.interceptor-api.jar
+7f0459bcb000-7f0459bd2000 r--s 00077000 fd:01 3405037                    /home/gabor/glassfish-4.0/glassfish/modules/javax.mail.jar
+7f0459bd2000-7f0459bd5000 r--s 00018000 fd:01 3404754                    /home/gabor/glassfish-4.0/glassfish/modules/javax.ws.rs-api.jar
+7f0459bd5000-7f0459bda000 r--s 00032000 fd:01 3405566                    /home/gabor/glassfish-4.0/glassfish/modules/javax.el.jar
+7f0459bda000-7f0459bde000 r--s 0000e000 fd:01 3405045                    /home/gabor/glassfish-4.0/glassfish/modules/javax.resource-api.jar
+7f0459bde000-7f0459be1000 r--s 0000d000 fd:01 3405397                    /home/gabor/glassfish-4.0/glassfish/modules/javax.jms-api.jar
+7f0459be1000-7f0459be4000 r--s 00010000 fd:01 3405043                    /home/gabor/glassfish-4.0/glassfish/modules/javax.json.jar
+7f0459be4000-7f0459be6000 r--s 0000b000 fd:01 3404875                    /home/gabor/glassfish-4.0/glassfish/modules/javax.servlet.jsp-api.jar
+7f0459be6000-7f0459be8000 r--s 00007000 fd:01 3404589                    /home/gabor/glassfish-4.0/glassfish/modules/javax.websocket-api.jar
+7f0459be8000-7f0459beb000 r--s 00010000 fd:01 3404074                    /home/gabor/glassfish-4.0/glassfish/modules/endorsed/webservices-api-osgi.jar
+7f0459beb000-7f0459bed000 r--s 00005000 fd:01 3404073                    /home/gabor/glassfish-4.0/glassfish/modules/endorsed/javax.annotation-api.jar
+7f0459bed000-7f0459bf0000 r--s 00018000 fd:01 3404490                    /home/gabor/glassfish-4.0/glassfish/modules/endorsed/jaxb-api-osgi.jar
+7f0459bf0000-7f0459bf2000 r--s 00005000 fd:01 3405747                    /home/gabor/glassfish-4.0/mq/lib/jaxm-api.jar
+7f0459bf2000-7f0459bfc000 r--s 00254000 fd:01 4057392                    /usr/local/jdk1.7.0_17/jre/lib/resources.jar
+7f0459bfc000-7f0459c01000 r--s 00309000 fd:01 44265                      /home/gabor/Downloads/sqlite-jdbc-3.7.2.jar
+7f0459c01000-7f0459c02000 ---p 00000000 00:00 0 
+7f0459c02000-7f0459d02000 rw-p 00000000 00:00 0 
+7f0459d02000-7f0459d05000 ---p 00000000 00:00 0 
+7f0459d05000-7f0459e03000 rw-p 00000000 00:00 0 
+7f0459e03000-7f0459e06000 ---p 00000000 00:00 0 
+7f0459e06000-7f0459f04000 rw-p 00000000 00:00 0 
+7f0459f04000-7f0459f07000 ---p 00000000 00:00 0 
+7f0459f07000-7f045a005000 rw-p 00000000 00:00 0 
+7f045a005000-7f045a008000 ---p 00000000 00:00 0 
+7f045a008000-7f045a106000 rw-p 00000000 00:00 0 
+7f045a106000-7f045a109000 ---p 00000000 00:00 0 
+7f045a109000-7f045a207000 rw-p 00000000 00:00 0 
+7f045a207000-7f045a20a000 ---p 00000000 00:00 0 
+7f045a20a000-7f045a308000 rw-p 00000000 00:00 0 
+7f045a308000-7f045a309000 ---p 00000000 00:00 0 
+7f045a309000-7f045b39c000 rw-p 00000000 00:00 0 
+7f045b39c000-7f045b558000 r--s 039dc000 fd:01 4058006                    /usr/local/jdk1.7.0_17/jre/lib/rt.jar
+7f045b558000-7f045b559000 ---p 00000000 00:00 0 
+7f045b559000-7f045b659000 rw-p 00000000 00:00 0 
+7f045b659000-7f045b65a000 ---p 00000000 00:00 0 
+7f045b65a000-7f045b75a000 rw-p 00000000 00:00 0 
+7f045b75a000-7f045b75b000 ---p 00000000 00:00 0 
+7f045b75b000-7f045b85b000 rw-p 00000000 00:00 0 
+7f045b85b000-7f045b85c000 ---p 00000000 00:00 0 
+7f045b85c000-7f045b967000 rw-p 00000000 00:00 0 
+7f045b967000-7f045b985000 rw-p 00000000 00:00 0 
+7f045b985000-7f045b9ae000 rw-p 00000000 00:00 0 
+7f045b9ae000-7f045bc0c000 rw-p 00000000 00:00 0 
+7f045bc0c000-7f045bc17000 rw-p 00000000 00:00 0 
+7f045bc17000-7f045bc35000 rw-p 00000000 00:00 0 
+7f045bc35000-7f045bc5e000 rw-p 00000000 00:00 0 
+7f045bc5e000-7f045bebb000 rw-p 00000000 00:00 0 
+7f045bebb000-7f045bee0000 rw-p 00000000 00:00 0 
+7f045bee0000-7f045bfff000 rw-p 00000000 00:00 0 
+7f045bfff000-7f045c000000 rw-p 00000000 00:00 0 
+7f045c000000-7f045cc18000 rw-p 00000000 00:00 0 
+7f045cc18000-7f0460000000 ---p 00000000 00:00 0 
+7f0460004000-7f04600c7000 rw-p 00000000 00:00 0 
+7f04600c7000-7f046017d000 rw-p 00000000 00:00 0 
+7f046017d000-7f04603ed000 rwxp 00000000 00:00 0 
+7f04603ed000-7f046317d000 rw-p 00000000 00:00 0 
+7f046317d000-7f0463197000 r-xp 00000000 fd:01 4057802                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libzip.so
+7f0463197000-7f0463397000 ---p 0001a000 fd:01 4057802                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libzip.so
+7f0463397000-7f0463398000 rw-p 0001a000 fd:01 4057802                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libzip.so
+7f0463398000-7f04633a4000 r-xp 00000000 fd:01 399293                     /lib64/libnss_files-2.17.90.so
+7f04633a4000-7f04635a3000 ---p 0000c000 fd:01 399293                     /lib64/libnss_files-2.17.90.so
+7f04635a3000-7f04635a4000 r--p 0000b000 fd:01 399293                     /lib64/libnss_files-2.17.90.so
+7f04635a4000-7f04635a5000 rw-p 0000c000 fd:01 399293                     /lib64/libnss_files-2.17.90.so
+7f04635bc000-7f04635c4000 rw-s 00000000 fd:01 1443362                    /tmp/hsperfdata_gabor/6326
+7f04635c4000-7f04635ed000 r-xp 00000000 fd:01 4057735                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libjava.so
+7f04635ed000-7f04637ed000 ---p 00029000 fd:01 4057735                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libjava.so
+7f04637ed000-7f04637ef000 rw-p 00029000 fd:01 4057735                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libjava.so
+7f04637ef000-7f04637fc000 r-xp 00000000 fd:01 4057584                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libverify.so
+7f04637fc000-7f04639fb000 ---p 0000d000 fd:01 4057584                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libverify.so
+7f04639fb000-7f04639fd000 rw-p 0000c000 fd:01 4057584                    /usr/local/jdk1.7.0_17/jre/lib/amd64/libverify.so
+7f04639fd000-7f0464444000 r-xp 00000000 fd:01 4057342                    /usr/local/jdk1.7.0_17/jre/lib/amd64/server/libjvm.so
+7f0464444000-7f0464644000 ---p 00a47000 fd:01 4057342                    /usr/local/jdk1.7.0_17/jre/lib/amd64/server/libjvm.so
+7f0464644000-7f04646e7000 rw-p 00a47000 fd:01 4057342                    /usr/local/jdk1.7.0_17/jre/lib/amd64/server/libjvm.so
+7f04646e7000-7f0464726000 rw-p 00000000 00:00 0 
+7f0464726000-7f046473c000 r-xp 00000000 fd:01 4057512                    /usr/local/jdk1.7.0_17/jre/lib/amd64/jli/libjli.so
+7f046473c000-7f046493c000 ---p 00016000 fd:01 4057512                    /usr/local/jdk1.7.0_17/jre/lib/amd64/jli/libjli.so
+7f046493c000-7f046493d000 rw-p 00016000 fd:01 4057512                    /usr/local/jdk1.7.0_17/jre/lib/amd64/jli/libjli.so
+7f046493d000-7f046493e000 rw-p 00000000 00:00 0 
+7f0464952000-7f0464955000 r--s 0000a000 fd:01 3010010                    /home/gabor/netbeans-7.3.1/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar
+7f0464955000-7f0464959000 r--s 00016000 fd:01 3010235                    /home/gabor/netbeans-7.3.1/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar
+7f0464959000-7f046495b000 r--s 00004000 fd:01 3010149                    /home/gabor/netbeans-7.3.1/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar
+7f046495b000-7f046495c000 rw-p 00000000 00:00 0 
+7f046495c000-7f046495d000 r--p 00000000 00:00 0 
+7f046495d000-7f046495e000 rw-p 00000000 00:00 0 
+7f046495e000-7f0464961000 ---p 00000000 00:00 0 
+7f0464961000-7f0464a5f000 rw-p 00000000 00:00 0 
+7fff30e8c000-7fff30ea2000 rw-p 00000000 00:00 0                          [stack]
+7fff30f1b000-7fff30f1c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Xbootclasspath/p:/home/gabor/netbeans-7.3.1/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/home/gabor/netbeans-7.3.1/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/home/gabor/netbeans-7.3.1/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar 
+java_command: packages.Lekerdez1
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibm/c4eb/bin:/usr/kerberos/bin:/home/gabor/bin
+USERNAME=gabor
+LD_LIBRARY_PATH=/usr/local/jdk1.7.0_17/jre/lib/amd64:/usr/local/jdk1.7.0_17/jre/lib/i386:
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x8a5d70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x8a5d70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x741e50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x741e50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x741e50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x741e50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x7417a0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x743b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: [libjvm.so+0x743b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x743b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Red Hat Enterprise Linux Workstation release 6.4 (Santiago)
+
+uname:Linux 2.6.32-358.11.1.el6.x86_64 #1 SMP Wed May 15 10:48:38 EDT 2013 x86_64
+libc:glibc 2.17.90 NPTL 2.17.90 
+rlimit: STACK 10240k, CORE 0k, NPROC 1024, NOFILE 4096, AS infinity
+load average:0.05 0.10 0.18
+
+/proc/meminfo:
+MemTotal:        7942032 kB
+MemFree:          401672 kB
+Buffers:          139960 kB
+Cached:          1877224 kB
+SwapCached:        85476 kB
+Active:          4160536 kB
+Inactive:        1884552 kB
+Active(anon):    3152728 kB
+Inactive(anon):  1030828 kB
+Active(file):    1007808 kB
+Inactive(file):   853724 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       8388600 kB
+SwapFree:        7733856 kB
+Dirty:              3904 kB
+Writeback:             0 kB
+AnonPages:       3943916 kB
+Mapped:          1328520 kB
+Shmem:            155580 kB
+Slab:             172848 kB
+SReclaimable:      76320 kB
+SUnreclaim:        96528 kB
+KernelStack:        6320 kB
+PageTables:        57776 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12359616 kB
+Committed_AS:    8249480 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      375904 kB
+VmallocChunk:   34359348444 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1798144 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:        8192 kB
+DirectMap2M:     8271872 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, ht, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz
+stepping	: 7
+cpu MHz		: 2601.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dts tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 5183.37
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz
+stepping	: 7
+cpu MHz		: 2601.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dts tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 5183.37
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz
+stepping	: 7
+cpu MHz		: 2601.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dts tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 5183.37
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz
+stepping	: 7
+cpu MHz		: 800.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dts tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 5183.37
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 7942032k(401672k free), swap 8388600k(7733856k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (23.7-b01) for linux-amd64 JRE (1.7.0_17-b02), built on Mar  1 2013 02:59:06 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Sun Sep 29 21:13:50 2013
+elapsed time: 0 seconds
+
